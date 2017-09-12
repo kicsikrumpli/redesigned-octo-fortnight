@@ -1,0 +1,57 @@
+/*
+- turn on the kettle to make the mirror damp, so that a hidden message appears
+- ...
+*/
+var state = {
+    isMirrorFoggy: false,
+    isKettleOn: false,
+    isTvOn: false,
+    channel: 0,
+};
+
+// kettle
+$(document).ready(function(){
+    $("#kettle").click(function(){
+        toggleKettle();
+        if(state.isMirrorFoggy == false) {
+            $("#mirror").addClass("fog_on");
+            state.isMirrorFoggy = true;
+        }
+    });
+
+    $("#remote_controller").click(function() {
+        toggleTv();
+    })
+});
+
+function toggleKettle() {
+    if (state.isKettleOn == true) {
+        $("#steam").removeClass("steam_on");
+        $("#steam").addClass("steam_off");
+        state.isKettleOn = false;
+    } else {
+        $("#steam").removeClass("steam_off");
+        $("#steam").addClass("steam_on");
+        state.isKettleOn = true;
+    }
+}
+
+function toggleTv() {
+    if (state.isTvOn == true) {
+        state.isTvOn = false;
+        $("#tv").css("background-image:", "");
+        $("#tv").css("background-color:", "black");
+    } else {
+        /*
+        switch (channel) {
+            case 12345:
+                break;
+            default:
+            
+        }
+        */
+        $("#tv").css("background-image:", "url(no_signal.gif)");
+        state.isTvOn = true;
+    }
+}
+
