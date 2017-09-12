@@ -1,0 +1,119 @@
+#main {
+    width: 1000px;
+    height: 666px;
+    position: relative;
+    background-image: url("bath-background.jpg");
+}
+
+.lo_button {
+    width: 40px;
+    height: 25px;
+    position: absolute;
+}
+
+.lo_on {
+    background-color: yellow;
+    opacity: 0.5
+}
+
+.lo_off {
+    opacity: 0.9;
+    filter: blur();
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 40%, rgba(1, 1, 1, 0) 80%);
+}
+
+#lo_0_0 {
+    top: 55px;
+    left: 450px;
+    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 100%, 10% 60%);
+}
+
+#lo_0_1 {
+    top: 36px;
+    left: 480px;
+    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 100%, 10% 60%);
+}
+
+#lo_0_2 {
+    top: 18px;
+    left: 510px;
+    -webkit-clip-path: polygon(70% 0, 100% 55%, 40% 100%, 10% 50%);
+}
+
+#lo_0_3 {
+    top: 3px;
+    left: 543px;
+    -webkit-clip-path: polygon(70% 0, 100% 55%, 40% 100%, 10% 40%);
+}
+
+#lo_1_0 {
+    top: 72px;
+    left: 472px;
+    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 100%, 10% 60%);
+}
+
+#lo_1_1 {
+    top: 55px;
+    left: 500px;
+    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 100%, 10% 60%);
+}
+
+#lo_1_2 {
+    top: 42px;
+    left: 527px;
+    -webkit-clip-path: polygon(70% 0, 100% 55%, 40% 100%, 10% 50%);
+}
+
+#lo_1_3 {
+    top: 29px;
+    left: 559px;
+    -webkit-clip-path: polygon(75% 0, 100% 55%, 40% 90%, 10% 40%);
+}
+
+#lo_2_0 {
+    top: 88px;
+    left: 490px;
+    -webkit-clip-path: polygon(70% 0, 100% 50%, 50% 100%, 20% 50%);
+}
+
+#lo_2_1 {
+    top: 74px;
+    left: 518px;
+    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 92%, 10% 50%);
+}
+
+#lo_2_2 {
+    top: 60px;
+    left: 545px;
+    -webkit-clip-path: polygon(70% 0, 100% 55%, 40% 100%, 10% 50%);
+}
+
+#lo_2_3 {
+    top: 49px;
+    left: 579px;
+    -webkit-clip-path: polygon(60% 0, 90% 55%, 35% 85%, 10% 35%);
+}
+
+#lo_3_0 {
+    top: 100px;
+    left: 510px;
+    -webkit-clip-path: polygon(68% 15%, 95% 55%, 50% 85%, 25% 50%);
+}
+
+#lo_3_1 {
+    top: 90px;
+    left: 540px;
+    -webkit-clip-path: polygon(55% 0, 85% 50%, 40% 80%, 13% 30%);
+}
+
+#lo_3_2 {
+    top: 75px;
+    left: 560px;
+    -webkit-clip-path: polygon(70% 17%, 95% 65%, 45% 100%, 20% 50%);
+}
+
+#lo_3_3 {
+    top: 67px;
+    left: 595px;
+    -webkit-clip-path: polygon(60% 10%, 80% 57%, 35% 82%, 10% 35%);
+}
