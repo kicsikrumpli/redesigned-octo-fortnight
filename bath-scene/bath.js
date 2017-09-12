@@ -18,12 +18,23 @@ var state = {
     TARGET_TEMPERATURE: 38
 };
 
-var LO_DIVS = [
-    [{id: "lo_0_0", state: true}, {id: "lo_0_1", state: false}, {id: "lo_0_2", state: true}, {id: "lo_0_3", state: true}],
-    [{id: "lo_1_0", state: false}, {id: "lo_1_1", state: false}, {id: "lo_1_2", state: false}, {id: "lo_1_3", state: true}],
-    [{id: "lo_2_0", state: true}, {id: "lo_2_1", state: false}, {id: "lo_2_2", state: true}, {id: "lo_2_3", state: true}],
-    [{id: "lo_3_0", state: true}, {id: "lo_3_1", state: true}, {id: "lo_3_2", state: true}, {id: "lo_3_3", state: true}]
-];
+const PATTERN = [
+    ["x","x","x","x"],
+    ["x","_","x","x"],
+    ["x","x","x","x"],
+    ["x","x","x","x"]
+]
+
+var LO_DIVS = (function(pattern){
+    var divs = [];
+    for(var row = 0; row < PATTERN.length; row++) {
+        divs[row] = [];
+        for(var col = 0; col < PATTERN[0].length; col ++) {
+            divs[row][col] = {id: `lo_${row}_${col}`, state: pattern[row][col] !== "x"};
+        }
+    }
+    return divs;
+})(PATTERN);
 
 // lights out
 (function(divs){
@@ -55,6 +66,7 @@ var LO_DIVS = [
         console.log(`lights up is ${isComplete?'':'not '}complete`);
     }
 
+    // init
     divs.forEach(row => 
         row.forEach(element => {
             $(`<div id=${element.id}/>`)

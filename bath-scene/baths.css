@@ -6,114 +6,117 @@
 }
 
 .lo_button {
-    width: 40px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     position: absolute;
 }
 
 .lo_on {
     background-color: yellow;
-    opacity: 0.5
+    opacity: 0.3
 }
 
 .lo_off {
     opacity: 0.9;
     filter: blur();
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 40%, rgba(1, 1, 1, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 50%, rgba(1, 1, 1, 0) 80%);
+    -webkit-transform: scale(1.1);
 }
 
 #lo_0_0 {
-    top: 55px;
-    left: 450px;
-    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 100%, 10% 60%);
+    top: 45px;
+    left: 448px;
+    -webkit-clip-path: polygon(58% 14%, 98% 49%, 50% 80%, 8% 48%);
 }
 
 #lo_0_1 {
-    top: 36px;
-    left: 480px;
-    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 100%, 10% 60%);
+    top: 27px;
+    left: 478px;
+    -webkit-clip-path: polygon(55% 15%, 95% 52%, 40% 84%, 0% 49%);
 }
 
 #lo_0_2 {
-    top: 18px;
-    left: 510px;
-    -webkit-clip-path: polygon(70% 0, 100% 55%, 40% 100%, 10% 50%);
+    top: 12px;
+    left: 504px;
+    -webkit-clip-path: polygon(62% 10%, 100% 54%, 45% 81%, 5% 43%);
 }
 
 #lo_0_3 {
-    top: 3px;
-    left: 543px;
-    -webkit-clip-path: polygon(70% 0, 100% 55%, 40% 100%, 10% 40%);
+    top: 0px;
+    left: 536px;
+    -webkit-clip-path: polygon(65% 0, 100% 50%, 38% 77%, 0% 33%);
 }
 
 #lo_1_0 {
-    top: 72px;
-    left: 472px;
-    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 100%, 10% 60%);
+    top: 65px;
+    left: 470px;
+    -webkit-clip-path: polygon(56% 10%, 95% 44%, 47% 72%, 8% 41%);
 }
 
 #lo_1_1 {
-    top: 55px;
-    left: 500px;
-    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 100%, 10% 60%);
+    top: 50px;
+    left: 496px;
+    -webkit-clip-path: polygon(60% 8%, 97% 44%, 45% 73%, 6% 39%);
 }
 
 #lo_1_2 {
-    top: 42px;
-    left: 527px;
-    -webkit-clip-path: polygon(70% 0, 100% 55%, 40% 100%, 10% 50%);
+    top: 38px;
+    left: 524px;
+    -webkit-clip-path: polygon(61% 4%, 97% 42%, 44% 67%, 6% 31%);
 }
 
 #lo_1_3 {
-    top: 29px;
-    left: 559px;
-    -webkit-clip-path: polygon(75% 0, 100% 55%, 40% 90%, 10% 40%);
+    top: 24px;
+    left: 555px;
+    /* display: none; */
+    -webkit-clip-path: polygon(64% 4%, 95% 45%, 37% 69%, 1% 31%);
 }
 
 #lo_2_0 {
-    top: 88px;
+    top: 83px;
     left: 490px;
-    -webkit-clip-path: polygon(70% 0, 100% 50%, 50% 100%, 20% 50%);
+    -webkit-clip-path: polygon(56% 9%, 89% 37%, 42% 62%, 8% 37%);
 }
 
 #lo_2_1 {
-    top: 74px;
-    left: 518px;
-    -webkit-clip-path: polygon(70% 0, 100% 45%, 40% 92%, 10% 50%);
+    top: 70px;
+    left: 515px;
+    -webkit-clip-path: polygon(60% 6%, 92% 37%, 41% 62%, 8% 34%);
 }
 
 #lo_2_2 {
-    top: 60px;
-    left: 545px;
-    -webkit-clip-path: polygon(70% 0, 100% 55%, 40% 100%, 10% 50%);
+    top: 55px;
+    left: 543px;
+    -webkit-clip-path: polygon(60% 10%, 89% 43%, 38% 66%, 7% 35%);
 }
 
 #lo_2_3 {
-    top: 49px;
-    left: 579px;
-    -webkit-clip-path: polygon(60% 0, 90% 55%, 35% 85%, 10% 35%);
+    top: 45px;
+    left: 570px;
+    -webkit-clip-path: polygon(66% 5%, 95% 43%, 38% 62%, 8% 29%);
 }
 
 #lo_3_0 {
-    top: 100px;
-    left: 510px;
-    -webkit-clip-path: polygon(68% 15%, 95% 55%, 50% 85%, 25% 50%);
+    top: 98px;
+    left: 505px;
+    -webkit-clip-path: polygon(60% 8%, 89% 33%, 45% 54%, 13% 33%);
 }
 
 #lo_3_1 {
-    top: 90px;
-    left: 540px;
-    -webkit-clip-path: polygon(55% 0, 85% 50%, 40% 80%, 13% 30%);
+    top: 85px;
+    left: 530px;
+    -webkit-clip-path: polygon(63% 8%, 90% 35%, 40% 58%, 12% 33%);
 }
 
 #lo_3_2 {
-    top: 75px;
-    left: 560px;
-    -webkit-clip-path: polygon(70% 17%, 95% 65%, 45% 100%, 20% 50%);
+    top: 73px;
+    left: 557px;
+    -webkit-clip-path: polygon(62% 8%, 90% 38%, 38% 58%, 11% 31%);
 }
 
 #lo_3_3 {
-    top: 67px;
-    left: 595px;
-    -webkit-clip-path: polygon(60% 10%, 80% 57%, 35% 82%, 10% 35%);
+    top: 62px;
+    left: 585px;
+    /* display: none; */
+    -webkit-clip-path: polygon(66% 10%, 89% 40%, 36% 59%, 8% 29%);
 }
