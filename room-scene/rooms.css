@@ -95,7 +95,7 @@
     top: 289px;
     left: 390px;
     position: absolute;
-    background-image: url(no_signal.gif);
+    background-image: url(black.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transform: perspective(600px) rotateY(212deg) rotateZ(1deg);

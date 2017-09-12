@@ -39,19 +39,16 @@ function toggleKettle() {
 function toggleTv() {
     if (state.isTvOn == true) {
         state.isTvOn = false;
-        $("#tv").css("background-image:", "");
-        $("#tv").css("background-color:", "black");
+        $("#tv").css("background-image", "url(black.png");
     } else {
-        /*
-        switch (channel) {
+        state.isTvOn = true;
+        switch (state.channel) {
             case 12345:
+                $("#tv").css("background-image", "url(channel_12345.png");
                 break;
             default:
-            
+                $("#tv").css("background-image", "url(no_signal.gif");
         }
-        */
-        $("#tv").css("background-image:", "url(no_signal.gif)");
-        state.isTvOn = true;
     }
 }
 
