@@ -37,3 +37,27 @@
     66% { opacity:0; }
     100% { opacity:0.7; }
 }
+
+#puzzle-piece {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 600px;
+    left: 145px;
+    transform: rotate(30deg) skewy(-10deg) skewx(-10deg);
+    background-color: red;
+    box-shadow: 3px 3px 1px darkgrey;
+    border: 1px solid black;
+}
+
+#puzzle-goal {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 612px;
+    left: 600px;
+    transform: rotate(30deg) skewy(-10deg) skewx(-10deg);
+    background-color: grey;
+    box-shadow: inset 3px 3px 1px darkgrey;
+    border: 1px solid black; 
+}
