@@ -93,16 +93,21 @@ function onLightsUpComplete() {
 }
 
 (function(onComplete) {
+    const PUZZLE_ID = 'puzzle-piece';
     $('#puzzle-piece')
         .attr('draggable', true)
-        .on('dragstart', (event) => { });
+        .on('dragstart', (event) => {
+            event.originalEvent.dataTransfer.setData('drag', PUZZLE_ID);
+         });
     $('#puzzle-goal')
         .on('dragover', event => {
             event.preventDefault();
         })
         .on('drop', event => {
             event.preventDefault();
-            onComplete();
+            if (event.originalEvent.dataTransfer.getData('drag') === PUZZLE_ID) {
+                onComplete();
+            }
         });
 })(onPuzzleComplete);
 
