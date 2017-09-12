@@ -91,3 +91,23 @@ function onLightsUpComplete() {
         .append(`${state.TARGET_TEMPERATURE}°C`)
         .show();
 }
+
+(function(onComplete) {
+    $('#puzzle-piece')
+        .attr('draggable', true)
+        .on('dragstart', (event) => { });
+    $('#puzzle-goal')
+        .on('dragover', event => {
+            event.preventDefault();
+        })
+        .on('drop', event => {
+            event.preventDefault();
+            onComplete();
+        });
+})(onPuzzleComplete);
+
+function onPuzzleComplete() {
+    console.log('puzzle complete');
+    $('#puzzle-piece').hide();
+    $('#puzzle-goal').hide();
+}
