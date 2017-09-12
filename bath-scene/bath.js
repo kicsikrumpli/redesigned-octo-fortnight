@@ -19,10 +19,10 @@ var state = {
 };
 
 const PATTERN = [
-    ["x","x","x","x"],
-    ["x","_","x","x"],
-    ["x","x","x","x"],
-    ["x","x","x","x"]
+    ["_","x","_","_"],
+    ["x","x","x","_"],
+    ["_","x","_","_"],
+    ["_","_","_","_"]
 ]
 
 var LO_DIVS = (function(pattern){
@@ -37,7 +37,7 @@ var LO_DIVS = (function(pattern){
 })(PATTERN);
 
 // lights out
-(function(divs){
+(function(divs, onComplete){
     const COLS = divs[0].length;
     const ROWS = divs.length;
     //console.log(`COLS: ${COLS}, ROWS: ${ROWS}`);
@@ -63,7 +63,9 @@ var LO_DIVS = (function(pattern){
         var isComplete = divs.reduce((a, b) => a.concat(b), [])
                 .map(e => e.state)
                 .reduce((a, b) => a && b, true);
-        console.log(`lights up is ${isComplete?'':'not '}complete`);
+        if (isComplete) {
+            onComplete();
+        }
     }
 
     // init
@@ -80,4 +82,12 @@ var LO_DIVS = (function(pattern){
         neighbors(parseInt(x), parseInt(y)).forEach(toggle);
         checkComplete();
     })
-})(LO_DIVS);
+})(LO_DIVS, onLightsUpComplete);
+
+function onLightsUpComplete() {
+    $(".lo_button").off("click");
+    $("#lightbeam").show();
+    $("#temperature")
+        .append(`${state.TARGET_TEMPERATURE}°C`)
+        .show();
+}

@@ -1,0 +1,39 @@
+#main {
+    width: 1000px;
+    height: 666px;
+    position: relative;
+    background-image: url("bath-background.jpg");
+}
+
+#lightbeam {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 0px;
+    left: 450px;
+    background: linear-gradient(135deg, rgba(255, 255, 0, 0.9), rgba(255, 255, 255, 0) 60%);
+    -webkit-clip-path: polygon(0% 14%, 30% 0%, 100% 85%, 20% 95%);
+    animation: lightbeam 2.5s ease 0s normal forwards;
+    display: none;
+}
+
+#temperature {
+    width: 22px;
+    height: 10px;
+    position: absolute;
+    top: 312px;
+    left: 743px;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    text-shadow: 0px 0px 3px yellow;
+    transform: skewy(-6deg);
+    animation: lightbeam 2.5s ease 0s normal forwards;
+    display: none;
+}
+
+@keyframes lightbeam {
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:0.7; }
+}
