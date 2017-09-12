@@ -1,0 +1,102 @@
+#main {
+    width: 1000px;
+    height: 666px;
+    position: absolute;
+    background-image: url("room-background.jpg");
+}
+
+.fog_on {
+    -webkit-animation: fog_on 6s ease-in;
+    width: 130px;
+    height: 125px;
+    top: 272px;
+    left: 90px;
+    position: absolute;
+    background-image: url(fog.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: perspective(600px) rotateX(-1deg) rotateY(31deg);
+    opacity: 0.9;
+}
+
+@-webkit-keyframes fog_on {
+    from {opacity: 0.0;}
+    to {opacity: 0.9;}
+}
+
+.steam_on {
+    -webkit-animation: steam_on 2s ease-in;
+    width: 100px;
+    height: 60px;
+    top: 328px;
+    left: 55px;
+    position: absolute;
+    background-image: url(steam.gif);
+    background-size: 100% 100%;
+    transform: perspective(600px) rotateY(180deg) rotateZ(-90deg);
+    opacity: 0.6;
+}
+
+@-webkit-keyframes steam_on {
+    from {opacity: 0.0;}
+    to {opacity: 0.6;}
+}
+
+.steam_off {
+    -webkit-animation: steam_off 2s ease-in;
+    width: 100px;
+    height: 60px;
+    top: 328px;
+    left: 55px;
+    position: absolute;
+    background-image: url(steam.gif);
+    background-size: 100% 100%;
+    transform: perspective(600px) rotateY(180deg) rotateZ(-90deg);
+    opacity: 0.0;
+}
+
+@-webkit-keyframes steam_off {
+    from {opacity: 0.6;}
+    to {opacity: 0.0;}
+}
+
+#kettle {
+    width: 100px;
+    height: 65px;
+    top: 393px;
+    left: 22px;
+    position: absolute;
+    background-image: url(kettle.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: perspective(600px) rotateY(155deg);
+}
+
+#remote_controller {
+    -webkit-animation: remote_controller_fade_in 1s;
+    width: 400px;
+    height: 400px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    background-image: url(remote_controller.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@-webkit-keyframes remote_controller_fade_in {
+    from {right: -400px;}
+    to {right: 0px;}
+}
+
+#tv {
+    width: 86px;
+    height: 51px;
+    top: 289px;
+    left: 390px;
+    position: absolute;
+    background-image: url(no_signal.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: perspective(600px) rotateY(212deg) rotateZ(1deg);
+}
