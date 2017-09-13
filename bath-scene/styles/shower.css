@@ -103,3 +103,65 @@
         left: 160px; 
     }
 }
+
+.shower-booth {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+#booth_0 {
+    top: 170px;
+    left: 42px;
+}
+
+#booth_1 {
+    top: 170px;
+    left: 170px;
+}
+
+#booth_2 {
+    top: 170px;
+    left: 290px;
+}
+
+#booth_3 {
+    top: 170px;
+    left: 425px;
+}
+
+.temp-display {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    color: black;
+    font-size: 20px;    
+}
+
+.temp-display:after {
+    content: '°C'
+}
+
+#temp_0 {
+    top: 9px;
+    left: 55px;
+    transform: skewy(5deg);
+}
+
+#temp_1 {
+    top: 18px;
+    left: 174px;
+    transform: skewy(2deg);
+}
+
+#temp_2 {
+    top: 18px;
+    left: 293px;
+    transform: skewy(-2deg);
+}
+
+#temp_3 {
+    top: 7px;
+    left: 420px;
+    transform: skewy(-8deg); 
+}
