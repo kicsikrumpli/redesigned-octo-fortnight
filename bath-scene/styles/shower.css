@@ -32,7 +32,7 @@
 }
 
 #shower-popup {
-    display: none;
+    /*display: none; */
     position: absolute;
     top: 0px;
     left: 0px;
@@ -164,4 +164,49 @@
     top: 7px;
     left: 420px;
     transform: skewy(-8deg); 
+}
+
+.water {
+    position: absolute;
+    background-color: blue;
+    background-image: url("../images/jet.gif");
+    background-size: 500% 400%;
+    background-position: -135px -600px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    width: 70px;
+    height: 220px;
+}
+
+.flow_0 {
+    display: none;
+}
+
+.flow_1 {
+    -webkit-clip-path: polygon(50% 0%, 60% 98%, 50% 100%, 40% 98%);
+}
+
+.flow_2 {
+    -webkit-clip-path: polygon(50% 0%, 75% 99%, 50% 100%, 25% 99%);
+}
+
+.flow_3 {
+    -webkit-clip-path: polygon(50% 0%, 90% 95%, 67% 99%, 50% 100%, 33% 99%, 10% 95%);
+}
+
+#jet_0 {
+    top: 90px;
+    left: 27px;
+}
+
+#jet_1 {
+    display: none;
+}
+
+#jet_2 {
+    display: none;  
+}
+
+#jet_3 {
+    display: none;    
 }
