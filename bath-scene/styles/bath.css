@@ -2,7 +2,7 @@
     width: 1000px;
     height: 666px;
     position: relative;
-    background-image: url("bath-background.jpg");
+    background-image: url("../images/bath-background.jpg");
 }
 
 #lightbeam {

@@ -1,0 +1,54 @@
+#shower {
+    width: 160px;
+    height: 200px;
+    position: absolute;
+    top: 270px;
+    left: 85px;
+    transform: perspective(80px) rotateY(6deg) rotateZ(2deg);
+    -webkit-clip-path: polygon(50% 2%, 70% 5%, 82% 10%, 90% 15%, 97% 24%, 99% 30%, 100% 40%, 100% 97%, 0% 100%, 0% 40%, 1% 25%, 3% 20%, 10% 12%, 18% 8%, 30% 4%);
+}
+
+.curtain {
+    width: 90px;
+    height: 250px;
+    position: absolute;
+    background-image: url('../images/curtain.jpg');    
+}
+
+#curtain-left {
+    top: 0px;
+    left: 0px;
+    background-position: 50% 50%;
+}
+
+.pull-left {
+    animation: roll-left 1.5s ease 1s 1 normal forwards;
+}
+
+#curtain-right {
+    top: 0px;
+    left: 70px;
+    background-position: -50% 50%;
+}
+
+.pull-right {
+    animation: roll-right 1.5s ease 1s 1 normal forwards;
+}
+
+@keyframes roll-left {
+    0% { 
+        left: 0px; 
+    }
+    100% { 
+        left: -87px; 
+    }
+}
+
+@keyframes roll-right {
+    0% { 
+        left: 70px; 
+    }
+    100% { 
+        left: 155px; 
+    }
+}

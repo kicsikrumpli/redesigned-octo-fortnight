@@ -3,9 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Baths</title>
-        <link rel="stylesheet" href="bath.css">
-        <link rel="stylesheet" href="lightsup.css">
-        <script src="jquery-3.2.1.js"></script>
+        <link rel="stylesheet" href="styles/bath.css">
+        <link rel="stylesheet" href="styles/lightsup.css">
+        <link rel="stylesheet" href="styles/shower.css">
+        <link rel="stylesheet" href="styles/lights.css">
+        
+        <script src="lib/jquery-3.2.1.js"></script>
     </head>
 
     <body>
@@ -13,9 +16,20 @@
             <div id="lo"></div>
             <div id="lightbeam"></div>
             <div id="temperature"></div>
+
+            <div id="light_0" class="light"></div>
+            <div id="light_1" class="light"></div>
+            <div id="light_2" class="light"></div>
+
             <div id="puzzle-piece"></div>
             <div id="puzzle-goal"></div>
+            <div id="shower">
+                <div id="shower-small"></div>
+                <div id="curtain-right" class="curtain"></div>            
+                <div id="curtain-left" class="curtain"></div>
+            </div>
         </div>
     </body>
-    <script src="bath.js"></script>
-</html>
+    <script src="scripts/lightsup.js"></script>
+    <script src="scripts/puzzle.js"></script>
+    </html>
