@@ -20,6 +20,14 @@
     }
 
     function updateFlows() {
+        showerFlows.forEach((value, index) => {
+            $(`#jet_${index}`)
+                .removeClass('flow_0')
+                .removeClass('flow_1')
+                .removeClass('flow_2')
+                .removeClass('flow_3')
+                .addClass(`flow_${value}`);
+        });
         console.log(`Update flows ${showerFlows}`);
     }
 
@@ -47,6 +55,6 @@
 
 function onShowerComplete() {
     console.log('Shower Puzzle Complete');
-    $('#shower-popup').hide();
+    $('#shower-popup').hide(1500);
     $('#shower-small').off('click');
 }
