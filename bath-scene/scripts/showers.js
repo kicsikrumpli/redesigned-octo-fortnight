@@ -16,7 +16,21 @@
     }
 
     function updateLights(temp) {
-        console.log(`Update lights to ${temp}C`);
+        if (temp === undefined) {
+            $('.light')
+                .css('background-color', '')
+                .css('opacity', '')
+                .addClass('off');
+        } else {
+            var color = temp < TARGET_TEMP ? 'blue' : 'red';
+            var opacity = Math.abs(TARGET_TEMP - temp) / 40;
+            console.log(`color: ${color}, opacity: ${opacity}`);
+            $('.light')
+                .removeClass('off')
+                .css('background-color', color)
+                .css('opacity', opacity);
+        }
+
     }
 
     function updateFlows() {
@@ -28,7 +42,6 @@
                 .removeClass('flow_3')
                 .addClass(`flow_${value}`);
         });
-        console.log(`Update flows ${showerFlows}`);
     }
 
     showerTemps.forEach((value, number) => {
