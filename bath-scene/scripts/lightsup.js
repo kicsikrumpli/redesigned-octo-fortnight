@@ -8,15 +8,7 @@
 - if the temp is right, feed bath monster from the trash, and it will hand you your reward in its tentacle
 - bonus game: lightsout on ceiling, when solved, shines light on TARGET_TEMPERATURE on the wall
 */
-var state = {
-    curtain: true,
-    puzzlePieceInHand: false,
-    HOT_TAP_TEMP: 60.0, // temperature of Hot Tap
-    hotFlow: 0.0, // flow of hot water from tap 0.0 .. 1.0
-    COLD_TAP_TEMP: 10.0,
-    coldFlow: 0.0,
-    TARGET_TEMPERATURE: 38
-};
+const TARGET_TEMPERATURE = 38;
 
 const PATTERN = [
     ["_","x","_","_"],
@@ -88,6 +80,6 @@ function onLightsUpComplete() {
     $(".lo_button").off("click");
     $("#lightbeam").show();
     $("#temperature")
-        .append(`${state.TARGET_TEMPERATURE}°C`)
+        .append(`${TARGET_TEMPERATURE}°C`)
         .show();
 }

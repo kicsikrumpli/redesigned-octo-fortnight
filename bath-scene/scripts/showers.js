@@ -1,6 +1,3 @@
-/*
-- open popup 
-*/
 (function(onComplete){
     var showerTemps = [7, 23, 59, 61];
     var showerFlows = [0,0,0,0];
@@ -24,7 +21,6 @@
         } else {
             var color = temp < TARGET_TEMP ? 'blue' : 'red';
             var opacity = Math.abs(TARGET_TEMP - temp) / 40;
-            console.log(`color: ${color}, opacity: ${opacity}`);
             $('.light')
                 .removeClass('off')
                 .css('background-color', color)
@@ -47,7 +43,6 @@
     showerTemps.forEach((value, number) => {
         $(`#temp_${number}`).text(value);
     });
-
     $('#shower-popup-mask').on('click', event => {
         $(event.target).parent().hide();
     });
@@ -67,7 +62,6 @@
 })(onShowerComplete);
 
 function onShowerComplete() {
-    console.log('Shower Puzzle Complete');
     $('#shower-popup').hide(1500);
     $('#shower-small').off('click');
 }
