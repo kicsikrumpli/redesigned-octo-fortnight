@@ -2,8 +2,8 @@
 - open popup 
 */
 (function(){
-    $('.popup-mask').on('click', event => {
-        $(event.target.parent.id).hide();
+    $('#shower-popup-mask').on('click', event => {
+        $(event.target).parent().hide();
     });
     $('#shower-small').on('click', event => {
         $('#shower-popup').show();
