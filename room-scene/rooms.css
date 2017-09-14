@@ -89,6 +89,114 @@
     to {right: 0px;}
 }
 
+#power_button {
+    width: 40px;
+    height: 40px;
+    top: 63px;
+    left: 29px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#ok_button {
+    width: 40px;
+    height: 40px;
+    top: 137px;
+    left: 121px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_0 {
+    width: 35px;
+    height: 35px;
+    top: 230px;
+    left: 244px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_1 {
+    width: 35px;
+    height: 35px;
+    top: 227px;
+    left: 113px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_2 {
+    width: 35px;
+    height: 35px;
+    top: 209px;
+    left: 145px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_3 {
+    width: 35px;
+    height: 35px;
+    top: 191px;
+    left: 176px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_4 {
+    width: 35px;
+    height: 35px;
+    top: 255px;
+    left: 128px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_5 {
+    width: 35px;
+    height: 35px;
+    top: 237px;
+    left: 161px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_6 {
+    width: 35px;
+    height: 35px;
+    top: 220px;
+    left: 194px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_7 {
+    width: 35px;
+    height: 35px;
+    top: 285px;
+    left: 144px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_8 {
+    width: 35px;
+    height: 35px;
+    top: 266px;
+    left: 178px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_button_9 {
+    width: 35px;
+    height: 35px;
+    top: 247px;
+    left: 211px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
 #tv {
     width: 86px;
     height: 51px;

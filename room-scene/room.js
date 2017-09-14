@@ -19,7 +19,7 @@ $(document).ready(function(){
         }
     });
 
-    $("#remote_controller").click(function() {
+    $("#power_button").click(function() {
         toggleTv();
     })
 });
