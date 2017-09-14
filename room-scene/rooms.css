@@ -92,13 +92,29 @@
 }
 
 @-webkit-keyframes remote_controller_fade_in {
-    from {right: -400px;}
-    to {right: 0px;}
+    from {
+        right: -400px;
+        bottom: -400px;
+        transform: rotateX(-90deg) rotateZ(-90deg);
+    }
+    to {
+        right: 0px;
+        bottom: 0px;
+        transform: rotateX(0deg) rotateZ(0deg);
+    }
 }
 
 @-webkit-keyframes remote_controller_fade_out {
-    from {right: 0px;}
-    to {right: -400px;}
+    from {
+        right: 0px;
+        bottom: 0px;
+        transform: rotateX(0deg) rotateZ(0deg);
+    }
+    to {
+        right: -400px;
+        bottom: -400px;
+        transform: rotateX(-90deg) rotateZ(-90deg);
+    }
 }
 
 #remote_controller_small {
