@@ -62,7 +62,6 @@
 })(onShowerComplete);
 
 function onShowerComplete() {
-    $('#shower-popup').hide(1500);
+    $('#shower-popup').hide(1500, endSequence);
     $('#shower-small').off('click');
-    endSequence();
 }
