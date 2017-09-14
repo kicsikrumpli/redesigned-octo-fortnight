@@ -1,5 +1,5 @@
 #epilogue {
-    /*display: none;*/
+    display: none;
     position: absolute;
     top: 418px;
     left: 570px;
@@ -21,27 +21,28 @@
     }
 }
 
+#qr {
+    position: absolute;
+    top: 32px;
+    left: 5px;
+    width: 20px;
+    height: 40px;
+    background-image: url('../images/qr-piece-right.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transform: rotateZ(-65deg);
+    animation: qr-mini 1.5s ease 0s 1 normal forwards;
+}
+
 @keyframes qr-mini {
     0% {
         transform: rotateZ(0deg); 
         background-position-y: 60px; 
+        background-position-x: -60px; 
     }
     100% {
         transform: rotateZ(-65deg);
         background-position-y: 0px;
+        background-position-x: 0px;
     }
-}
-
-#qr {
-    position: absolute;
-    top: -25px;
-    left: 5px;
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    background-image: url('../images/qr-piece-right.png');
-    background-size: 20%;
-    background-repeat: no-repeat;
-    transform: rotateZ(-65deg); 
-    animation: qr-mini 1.5s ease 0s 1 normal forwards;    
 }
