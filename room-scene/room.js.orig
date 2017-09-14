@@ -160,9 +160,17 @@ function updateTvScreen() {
     }
 }
 
+<<<<<<< HEAD
+function changeChannelTo() {
+    state.channel = state.changeChannelTo;
+    updateTvScreen();
+}
+
 function openCupboard() {
 	$("#cupboard").fadeIn("fast");
 }
+=======
+>>>>>>> dfa3851accf4c7c6bf9c29b43dd67768eba7aa50
 
 // TEMP
 $(document).ready(function(){

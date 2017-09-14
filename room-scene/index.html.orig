@@ -27,10 +27,10 @@
                 <div id="channel_8"></div>
                 <div id="channel_9"></div>
             </div>
-            <div id="tv"></div>
             <div id="tv">
                 <div id="change_channel_to"></div>
             </div>
+<<<<<<< HEAD
             <div id="tv"></div>
             
             <span id="cupboard">
@@ -39,6 +39,8 @@
             </span>
             <button id="open" type="button">Open</button>
             
+=======
+>>>>>>> dfa3851accf4c7c6bf9c29b43dd67768eba7aa50
         </div>
     </body>
     <script src="room.js"></script>

@@ -1,0 +1,3 @@
+function endSequence() {
+    $('#epilogue').show();
+}

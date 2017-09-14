@@ -222,15 +222,11 @@
     background-image: url(black.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    transform: perspective(600px) rotateY(212deg) rotateZ(1deg);
-    transform: perspective(600px) rotateY(391deg) rotateZ(-1deg);
+<<<<<<< HEAD
     transform: perspective(600px) rotateY(212deg) rotateZ(1deg);
 }
 
-#change_channel_to {
-    color: green;
-    font-family: fantasy;
-}
+
 
 #cupboard {
 	position: absolute;
@@ -242,4 +238,12 @@
 #openedcupboard {
     width: 50%;
     height: 165px;
+=======
+    transform: perspective(600px) rotateY(391deg) rotateZ(-1deg);
+}
+
+#change_channel_to {
+    color: green;
+    font-family: fantasy;
+>>>>>>> dfa3851accf4c7c6bf9c29b43dd67768eba7aa50
 }
