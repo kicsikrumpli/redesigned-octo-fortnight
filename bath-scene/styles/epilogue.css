@@ -38,11 +38,13 @@
     0% {
         transform: rotateZ(0deg); 
         background-position-y: 60px; 
-        background-position-x: -60px; 
+        background-position-x: -60px;
+        opacity: 0.1;
     }
     100% {
         transform: rotateZ(-65deg);
         background-position-y: 0px;
         background-position-x: 0px;
+        opacity: 0.6;
     }
 }

@@ -4,6 +4,7 @@ function endSequence() {
 
 $(document).ready(function(){
 	$("#qrcontainer").click(function() {
+		sessionStorage.setItem("right", true);
 		window.location.href = "../lobby-scene/index.html";
 	});
 });
