@@ -7,6 +7,7 @@ var state = {
     isKettleOn: false,
     isTvOn: false,
     channel: 0,
+    changeChannelTo: 12345,
 };
 
 // kettle
@@ -19,8 +20,14 @@ $(document).ready(function(){
         }
     });
 
-    $("#remote_controller").click(function() {
+    $("#power_button").click(function() {
         toggleTv();
+    })
+
+    $("#ok_button").click(function() {
+        if (state.isTvOn == true) {
+            changeChannelTo();
+        }
     })
 });
 
@@ -39,19 +46,29 @@ function toggleKettle() {
 function toggleTv() {
     if (state.isTvOn == true) {
         state.isTvOn = false;
-        $("#tv").css("background-image:", "");
-        $("#tv").css("background-color:", "black");
     } else {
-        /*
-        switch (channel) {
-            case 12345:
-                break;
-            default:
-            
-        }
-        */
-        $("#tv").css("background-image:", "url(no_signal.gif)");
         state.isTvOn = true;
     }
+    updateTvScreen();
 }
+
+function updateTvScreen() {
+    if (state.isTvOn == false) {
+        $("#tv").css("background-image", "url(black.png");
+    } else {
+        switch (state.channel) {
+            case 12345:
+                $("#tv").css("background-image", "url(channel_12345.png");
+                break;
+            default:
+                $("#tv").css("background-image", "url(no_signal.gif");
+        }
+    }
+}
+
+function changeChannelTo() {
+    state.channel = state.changeChannelTo;
+    updateTvScreen();
+}
+
 
