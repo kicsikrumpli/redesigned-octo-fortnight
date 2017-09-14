@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="styles/shower.css">
         <link rel="stylesheet" href="styles/lights.css">
         <link rel="stylesheet" href="styles/epilogue.css">
+        <link rel="stylesheet" href="../core.css">        
         
         <script src="lib/jquery-3.2.1.js"></script>
     </head>
@@ -54,9 +55,15 @@
             </div>
 
             <div id="epilogue">
-                <div id="qr-mini"></div>
+                <div id="qr"></div>
             </div>
-            <div id="qr"></div>
+
+            <span id="qrbackground"></span>
+        	<span id=qrcontainer class="ui-absolute">
+        		<span id="qrcontent">
+        			<span id="secondpart"><img src="images/qr-piece-right.png"></img></span>
+        		</span>
+        	</span>
 
         </div>
     </body>
@@ -64,4 +71,5 @@
     <script src="scripts/puzzle.js"></script>
     <script src="scripts/showers.js"></script>
     <script src="scripts/epilogue.js"></script>
+    <script src="../core.js"></script>    
 </html>

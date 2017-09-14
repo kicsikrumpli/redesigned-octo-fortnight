@@ -32,7 +32,7 @@
     }
 }
 
-#qr-mini {
+#qr {
     position: absolute;
     top: -25px;
     left: 5px;
@@ -44,8 +44,4 @@
     background-repeat: no-repeat;
     transform: rotateZ(-65deg); 
     animation: qr-mini 1.5s ease 0s 1 normal forwards;    
-}
-
-#qr {
-    display: none;
 }
