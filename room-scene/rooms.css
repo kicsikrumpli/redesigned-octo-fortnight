@@ -227,6 +227,10 @@
     transform: perspective(600px) rotateY(212deg) rotateZ(1deg);
 }
 
+#open {
+	display: none;
+}
+
 #change_channel_to {
     color: green;
     font-family: fantasy;
@@ -245,8 +249,8 @@
 }
 
 #qr {
-	width: 20%;
-    height: 20%;
+	width: 20px;
+    height: 40px;
     position: absolute;
     left: 10px;
     top: 25px;
