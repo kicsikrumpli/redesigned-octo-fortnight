@@ -243,3 +243,11 @@
     width: 50%;
     height: 165px;
 }
+
+#qr {
+	width: 20%;
+    height: 20%;
+    position: absolute;
+    left: 10px;
+    top: 25px;
+}

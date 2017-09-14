@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Rooms</title>
+        <link rel="stylesheet" href="../core.css">
         <link rel="stylesheet" href="rooms.css">
         <script src="jquery-3.2.1.js"></script>
     </head>
@@ -35,11 +36,17 @@
             
             <span id="cupboard">
             	<img id="openedcupboard" src="shelf.png">
-            	<img id="qrfragment" src="firstpart.png">
-            </span>
+            	<img id="qr" src="../qrfragment.jpg">
+            </span>            
+            <span id="qrbackground"></span>
+        	<span id=qrcontainer class="ui-absolute">
+        		<span id="qrcontent">
+        			<span id="firstpart"><img src="firstpart.png"></img></span>
+        		</span>
+        	</span>
             <button id="open" type="button">Open</button>
-            
         </div>
     </body>
+    <script src="../core.js"></script>
     <script src="room.js"></script>
 </html>
