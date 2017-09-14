@@ -71,4 +71,13 @@ function changeChannelTo() {
     updateTvScreen();
 }
 
+function openCupboard() {
+	$("#cupboard").fadeIn("fast");
+}
 
+// TEMP
+$(document).ready(function(){
+	$("#open").click(function() {
+		openCupboard();
+	});
+});

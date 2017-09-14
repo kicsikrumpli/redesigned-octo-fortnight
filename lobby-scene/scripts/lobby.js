@@ -29,8 +29,8 @@ $(document).ready(function() {
 	$("#stand").click(function(event) {
 		event.stopPropagation();
 		// Reading from session storage
-		$("#firstpart").toggleClass("ui-show", sessionStorage.getItem("left") !== null);
-		$("#secondpart").toggleClass("ui-show", sessionStorage.getItem("right") !== null);
+		$("#firstpart").toggleClass("ui-show", sessionStorage.getItem("left") === "true");
+		$("#secondpart").toggleClass("ui-show", sessionStorage.getItem("right") === "true");
 		$("#qrbackground, #qrcontainer").fadeIn();
 	});
 	

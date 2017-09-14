@@ -208,3 +208,17 @@
     background-size: 100% 100%;
     transform: perspective(600px) rotateY(212deg) rotateZ(1deg);
 }
+
+
+
+#cupboard {
+	position: absolute;
+	top: 372px;
+    left: 441px;
+    display: none;
+}
+
+#openedcupboard {
+    width: 50%;
+    height: 165px;
+}
