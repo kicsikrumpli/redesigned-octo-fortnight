@@ -7,6 +7,8 @@ var state = {
     isKettleOn: false,
     isTvOn: false,
     channel: 0,
+    changeChannelTo: "",
+    isRemoteControllerPickedUp: false
 };
 
 // kettle
@@ -19,10 +21,66 @@ $(document).ready(function(){
         }
     });
 
-    $("#remote_controller").click(function() {
+    $("#power_button").click(function() {
         toggleTv();
     })
+
+    $("#ok_button").click(function() {
+        if (state.isTvOn == true && state.changeChannelTo != "") {
+            changeChannelTo();
+        }
+    })
+
+    $("#remote_controller_small").click(function() {
+        if (state.isRemoteControllerPickedUp == false) {
+            state.isRemoteControllerPickedUp = true;
+            pickUpRemoteController();
+        } else {
+            state.isRemoteControllerPickedUp = false;
+            putDownRemoteController();
+        }
+    })
+
+
+    $("#channel_0").click(function() {
+        updateChangeChannelTo("0");
+    })
+    $("#channel_1").click(function() {
+        updateChangeChannelTo("1");
+    })
+    $("#channel_2").click(function() {
+        updateChangeChannelTo("2");
+    })
+    $("#channel_3").click(function() {
+        updateChangeChannelTo("3");
+    })
+    $("#channel_4").click(function() {
+        updateChangeChannelTo("4");
+    })
+    $("#channel_5").click(function() {
+        updateChangeChannelTo("5");
+    })
+    $("#channel_6").click(function() {
+        updateChangeChannelTo("6");
+    })
+    $("#channel_7").click(function() {
+        updateChangeChannelTo("7");
+    })
+    $("#channel_8").click(function() {
+        updateChangeChannelTo("8");
+    })
+    $("#channel_9").click(function() {
+        updateChangeChannelTo("9");
+    })
+
 });
+
+function updateChangeChannelTo(channelNumber) {
+    if (state.isTvOn == true) {
+        state.changeChannelTo += channelNumber;
+        $("#change_channel_to").html(state.changeChannelTo);
+    }
+}
 
 function toggleKettle() {
     if (state.isKettleOn == true) {
@@ -39,19 +97,69 @@ function toggleKettle() {
 function toggleTv() {
     if (state.isTvOn == true) {
         state.isTvOn = false;
-        $("#tv").css("background-image:", "");
-        $("#tv").css("background-color:", "black");
     } else {
-        /*
-        switch (channel) {
-            case 12345:
-                break;
-            default:
-            
-        }
-        */
-        $("#tv").css("background-image:", "url(no_signal.gif)");
         state.isTvOn = true;
     }
+    updateTvScreen();
 }
+
+function pickUpRemoteController() {
+    $("#remote_controller").removeClass("remote_controller_off");
+    $("#remote_controller").addClass("remote_controller_on");
+}
+
+function putDownRemoteController() {
+    $("#remote_controller").removeClass("remote_controller_on");
+    $("#remote_controller").addClass("remote_controller_off");
+}
+
+function changeChannelTo() {
+    state.channel = state.changeChannelTo;
+    updateTvScreen();
+}
+
+function updateTvScreen() {
+    state.changeChannelTo = "";
+    $("#change_channel_to").html(state.changeChannelTo);
+
+    if (state.isTvOn == false) {
+        $("#tv").css("background-image", "url(black.png");
+    } else {
+        switch (state.channel) {
+            case "12345":
+                $("#tv").css("background-image", "url(channel_12345.gif");
+                break;
+            case "1":
+                $("#tv").css("background-image", "url(channel_1.gif");
+                break;
+            case "2":
+                $("#tv").css("background-image", "url(channel_2.gif");
+                break;
+            case "3":
+                $("#tv").css("background-image", "url(channel_3.gif");
+                break;
+            case "4":
+                $("#tv").css("background-image", "url(channel_4.gif");
+                break;
+            case "5":
+                $("#tv").css("background-image", "url(channel_5.gif");
+                break;
+            case "6":
+                $("#tv").css("background-image", "url(channel_6.gif");
+                break;
+            case "7":
+                $("#tv").css("background-image", "url(channel_7.gif");
+                break;
+            case "8":
+                $("#tv").css("background-image", "url(channel_8.gif");
+                break;
+            case "9":
+                $("#tv").css("background-image", "url(channel_9.gif");
+                break;
+            default:
+                $("#tv").css("background-image", "url(no_signal.gif");
+        }
+    }
+}
+
 

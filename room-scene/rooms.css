@@ -72,7 +72,7 @@
     transform: perspective(600px) rotateY(155deg);
 }
 
-#remote_controller {
+.remote_controller_on {
     -webkit-animation: remote_controller_fade_in 1s;
     width: 400px;
     height: 400px;
@@ -89,14 +89,159 @@
     to {right: 0px;}
 }
 
+.remote_controller_off {
+    -webkit-animation: remote_controller_fade_out 1s;
+    width: 400px;
+    height: 400px;
+    bottom: 0px;
+    right: -400px;
+    position: absolute;
+    background-image: url(remote_controller.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@-webkit-keyframes remote_controller_fade_out {
+    from {right: 0px;}
+    to {right: -400px;}
+}
+
+#remote_controller_small {
+    width: 80px;
+    height: 54px;
+    top: 607px;
+    left: 95px;
+    position: absolute;
+    background-image: url(remote_controller_small.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#power_button {
+    width: 40px;
+    height: 40px;
+    top: 63px;
+    left: 29px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#ok_button {
+    width: 40px;
+    height: 40px;
+    top: 137px;
+    left: 121px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+.channel_button {
+    
+}
+
+#channel_0 {
+    width: 35px;
+    height: 35px;
+    top: 230px;
+    left: 244px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_1 {
+    width: 35px;
+    height: 35px;
+    top: 227px;
+    left: 113px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_2 {
+    width: 35px;
+    height: 35px;
+    top: 209px;
+    left: 145px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_3 {
+    width: 35px;
+    height: 35px;
+    top: 191px;
+    left: 176px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_4 {
+    width: 35px;
+    height: 35px;
+    top: 255px;
+    left: 128px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_5 {
+    width: 35px;
+    height: 35px;
+    top: 237px;
+    left: 161px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_6 {
+    width: 35px;
+    height: 35px;
+    top: 220px;
+    left: 194px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_7 {
+    width: 35px;
+    height: 35px;
+    top: 285px;
+    left: 144px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_8 {
+    width: 35px;
+    height: 35px;
+    top: 266px;
+    left: 178px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
+#channel_9 {
+    width: 35px;
+    height: 35px;
+    top: 247px;
+    left: 211px;
+    position: absolute;
+    background: radial-gradient(ellipse at center);
+}
+
 #tv {
     width: 86px;
     height: 51px;
     top: 289px;
     left: 390px;
     position: absolute;
-    background-image: url(no_signal.gif);
+    background-image: url(black.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    transform: perspective(600px) rotateY(212deg) rotateZ(1deg);
+    transform: perspective(600px) rotateY(391deg) rotateZ(-1deg);
+}
+
+#change_channel_to {
+    color: green;
+    font-family: fantasy;
 }
