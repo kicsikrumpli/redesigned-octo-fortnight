@@ -15,10 +15,17 @@ var state = {
 $(document).ready(function(){
     $("#kettle").click(function(){
         toggleKettle();
-        if(state.isMirrorFoggy == false) {
-            $("#mirror").addClass("fog_on");
-            state.isMirrorFoggy = true;
+        
+        if(state.isKettleOn) {
+        	$("#mirror").fadeIn(6000);
+        } else {
+        	$("#mirror").fadeOut(6000);
         }
+        
+//        if(state.isMirrorFoggy == false) {
+//            $("#mirror").toggleClass("fog_on");
+//            state.isMirrorFoggy = true;
+//        }
     });
 
     $("#power_button").click(function() {
@@ -31,14 +38,20 @@ $(document).ready(function(){
         }
     })
 
-    $("#remote_controller_small").click(function() {
-        if (state.isRemoteControllerPickedUp == false) {
-            state.isRemoteControllerPickedUp = true;
+    $("#remote_controller_small").click(function(event) {
+//        if (state.isRemoteControllerPickedUp == false) {
+    	if ($("#remote_controller").not(".ui-displayed")) {
+        	event.stopPropagation();
+        	$("#remote_controller").toggleClass("ui-displayed");
+            $("#remote_controller_small").fadeOut();
             pickUpRemoteController();
-        } else {
-            state.isRemoteControllerPickedUp = false;
-            putDownRemoteController();
+//            state.isRemoteControllerPickedUp = true;
         }
+        // Not needed
+//        else {
+//            state.isRemoteControllerPickedUp = false;
+//            putDownRemoteController();
+//        }
     })
 
 
@@ -166,6 +179,20 @@ function openCupboard() {
 }
 
 $(document).ready(function(){
+	// Hide remote control
+	$("#main").click(function() {
+		if($("#remote_controller").is(".ui-displayed")) {
+			$("#remote_controller").toggleClass("ui-displayed");
+			$("#remote_controller_small").fadeIn();
+			putDownRemoteController();
+		}
+	});
+	
+	// Prevent delegae on remote control
+	$("#remote_controller").click(function() {
+		event.stopPropagation();
+	});
+	
 	$("#qrcontainer").click(function() {
 		sessionStorage.setItem("left", true);
 		window.location.href = "../lobby-scene/index.html";

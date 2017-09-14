@@ -6,8 +6,9 @@
     overflow: hidden;
 }
 
-.fog_on {
-    -webkit-animation: fog_on 6s ease-in;
+/* .fog_on { */
+/*     -webkit-animation: fog_on 6s ease-in, fog_off 6s ease-out; */
+#mirror {
     width: 130px;
     height: 125px;
     top: 272px;
@@ -18,11 +19,17 @@
     background-size: 100% 100%;
     transform: perspective(600px) rotateX(-1deg) rotateY(31deg);
     opacity: 0.9;
+    display: none;
 }
 
 @-webkit-keyframes fog_on {
     from {opacity: 0.0;}
     to {opacity: 0.9;}
+}
+
+@-webkit-keyframes fog_off {
+    from {opacity: 0.9;}
+    to {opacity: 0.0;}
 }
 
 .steam_on {
