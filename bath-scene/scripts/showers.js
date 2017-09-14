@@ -64,4 +64,5 @@
 function onShowerComplete() {
     $('#shower-popup').hide(1500);
     $('#shower-small').off('click');
+    endSequence();
 }
