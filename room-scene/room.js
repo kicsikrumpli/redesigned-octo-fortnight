@@ -126,6 +126,7 @@ function updateTvScreen() {
         switch (state.channel) {
             case "12345":
                 $("#tv").css("background-image", "url(channel_12345.gif");
+                openCupboard();
                 break;
             case "1":
                 $("#tv").css("background-image", "url(channel_1.gif");
@@ -166,6 +167,7 @@ function openCupboard() {
 
 $(document).ready(function(){
 	$("#qrcontainer").click(function() {
+		sessionStorage.setItem("left", true);
 		window.location.href = "../lobby-scene/index.html";
 	});
 });
