@@ -15,25 +15,6 @@ $(document).ready(function() {
 		});
 	});
 	
-	// QR code container related listeners
-	$("#qrbackground").click(function() {
-		if($("#qrbackground, #qrcontainer").is(":visible")) {
-			$("#qrbackground, #qrcontainer").fadeOut();
-		}
-	});
-	
-	$("#qrcontainer").click(function() {
-		event.stopPropagation();
-	})
-	
-	$("#stand").click(function(event) {
-		event.stopPropagation();
-		// Reading from session storage
-		$("#firstpart").toggleClass("ui-show", sessionStorage.getItem("left") === "true");
-		$("#secondpart").toggleClass("ui-show", sessionStorage.getItem("right") === "true");
-		$("#qrbackground, #qrcontainer").fadeIn();
-	});
-	
 	// Control (example for session storage access)
 	$("#left").click(function(event) {
 		sessionStorage.setItem("left", true);
