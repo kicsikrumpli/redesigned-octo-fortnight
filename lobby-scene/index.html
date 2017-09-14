@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lobby</title>
+        <link rel="stylesheet" href="styles/lobby.css">
+        <script src="lib/jquery-3.2.1.js"></script>
+    </head>
+
+    <body>
+    	<div id="background"></div>
+        <div id="main">
+        	<img id="lobbyimage" src="images/1bb338ba_z.jpg">
+        	<span id="bellboy" class="ui-absolute"></span>
+        	<span id="speechbubble" class="ui-absolute">
+        		<span id="speechbubblecontent"><b>Welcome!</b> May I suggest a visit to our baths? You can get there via the elevator behind me. If you wish rest instead, the receptionist will gladly direct you to your room.</span>
+        	</span>
+        	<span id="reception" class="ui-absolute"></span>
+        	<span id="elevator" class="ui-absolute"></span>
+        	<span id="stand" class="ui-absolute"></span>
+        	<span id="qrbackground"></span>
+        	<span id=qrcontainer class="ui-absolute">
+        		<span id="qrborder">Your $40 off<br>Hotels.com Coupons</span>
+        		<span id="qrcontent">
+        			<span id="firstpart"><img src="images/firstpart.png"></img></span>
+	        		<span id="secondpart"><img src="images/secondpart.png"></img></span>
+        		</span>
+        	</span>
+        </div>
+        <div id="control" class="ui-absolute">
+        	<button id="left" type="button">Left</button>
+        	<button id="right" type="button">Right</button>
+        	<button id="clear" type="button">Clear</button>
+        </div>
+    </body>
+    <script src="scripts/lobby.js"></script>
+</html>
