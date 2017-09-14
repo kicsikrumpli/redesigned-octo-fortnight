@@ -229,9 +229,7 @@
     background-image: url(black.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    transform: perspective(600px) rotateY(212deg) rotateZ(1deg);
     transform: perspective(600px) rotateY(391deg) rotateZ(-1deg);
-    transform: perspective(600px) rotateY(212deg) rotateZ(1deg);
 }
 
 #open {
