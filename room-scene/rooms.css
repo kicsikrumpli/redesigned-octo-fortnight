@@ -3,6 +3,7 @@
     height: 666px;
     position: absolute;
     background-image: url("room-background.jpg");
+    overflow: hidden;
 }
 
 .fog_on {
@@ -72,25 +73,12 @@
     transform: perspective(600px) rotateY(155deg);
 }
 
-.remote_controller_on {
-    -webkit-animation: remote_controller_fade_in 1s;
-    width: 400px;
-    height: 400px;
-    bottom: 0px;
-    right: 0px;
-    position: absolute;
-    background-image: url(remote_controller.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
 @-webkit-keyframes remote_controller_fade_in {
     from {right: -400px;}
     to {right: 0px;}
 }
 
-.remote_controller_off {
-    -webkit-animation: remote_controller_fade_out 1s;
+#remote_controller {
     width: 400px;
     height: 400px;
     bottom: 0px;
