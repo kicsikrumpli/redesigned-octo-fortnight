@@ -1,4 +1,4 @@
-(function(onComplete){
+$(document).ready((function(onComplete){
     var showerTemps = [7, 23, 59, 61];
     var showerFlows = [0,0,0,0];
     const MAX_FLOW = 4;
@@ -59,7 +59,7 @@
             onComplete();
         }
     });
-})(onShowerComplete);
+})(onShowerComplete));
 
 function onShowerComplete() {
     $('#shower-popup').hide(1500, endSequence);

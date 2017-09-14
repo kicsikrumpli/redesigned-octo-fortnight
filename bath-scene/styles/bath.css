@@ -3,6 +3,7 @@
     height: 666px;
     position: relative;
     background-image: url("../images/bath-background.jpg");
+    overflow: hidden;
 }
 
 #lightbeam {

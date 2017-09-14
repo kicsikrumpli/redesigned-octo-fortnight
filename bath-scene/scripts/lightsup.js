@@ -28,8 +28,7 @@ var LO_DIVS = (function(pattern){
     return divs;
 })(PATTERN);
 
-// lights out
-(function(divs, onComplete){
+$(document).ready(() => (function(divs, onComplete){
     const COLS = divs[0].length;
     const ROWS = divs.length;
     //console.log(`COLS: ${COLS}, ROWS: ${ROWS}`);
@@ -74,7 +73,7 @@ var LO_DIVS = (function(pattern){
         neighbors(parseInt(x), parseInt(y)).forEach(toggle);
         checkComplete();
     })
-})(LO_DIVS, onLightsUpComplete);
+})(LO_DIVS, onLightsUpComplete));
 
 function onLightsUpComplete() {
     $(".lo_button").off("click");

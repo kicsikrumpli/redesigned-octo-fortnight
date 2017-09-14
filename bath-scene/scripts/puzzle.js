@@ -1,4 +1,4 @@
-(function(onComplete) {
+$(document).ready(() => (function(onComplete) {
     const PUZZLE_ID = 'puzzle-piece';
     $('#puzzle-piece')
         .attr('draggable', true)
@@ -15,7 +15,7 @@
                 onComplete();
             }
         });
-})(onPuzzleComplete);
+})(onPuzzleComplete));
 
 function onPuzzleComplete() {
     $('#puzzle-piece').hide();
