@@ -104,13 +104,11 @@ function toggleTv() {
 }
 
 function pickUpRemoteController() {
-    $("#remote_controller").removeClass("remote_controller_off");
-    $("#remote_controller").addClass("remote_controller_on");
+    $("#remote_controller").css("-webkit-animation", "remote_controller_fade_in 1s forwards");
 }
 
 function putDownRemoteController() {
-    $("#remote_controller").removeClass("remote_controller_on");
-    $("#remote_controller").addClass("remote_controller_off");
+    $("#remote_controller").css("-webkit-animation", "remote_controller_fade_out 1s forwards");
 }
 
 function changeChannelTo() {
