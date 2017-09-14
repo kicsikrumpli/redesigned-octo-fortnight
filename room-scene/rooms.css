@@ -73,11 +73,6 @@
     transform: perspective(600px) rotateY(155deg);
 }
 
-@-webkit-keyframes remote_controller_fade_in {
-    from {right: -400px;}
-    to {right: 0px;}
-}
-
 #remote_controller {
     width: 400px;
     height: 400px;
@@ -87,6 +82,11 @@
     background-image: url(remote_controller.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+@-webkit-keyframes remote_controller_fade_in {
+    from {right: -400px;}
+    to {right: 0px;}
 }
 
 @-webkit-keyframes remote_controller_fade_out {
@@ -121,10 +121,6 @@
     left: 121px;
     position: absolute;
     background: radial-gradient(ellipse at center);
-}
-
-.channel_button {
-    
 }
 
 #channel_0 {
