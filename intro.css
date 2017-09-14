@@ -1,10 +1,18 @@
 #main {
-    position: relative;
-    width: 1000px;
-    height: 666px;
     background-image: url('full.png');
-    opacity: 0.5;
-    /*animation: main 1.5s ease 0s 1 normal forwards;*/
+    animation: main 1.5s ease 0s 1 normal forwards;
+}
+
+@keyframes main {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .floating-panel {
@@ -13,29 +21,53 @@
     height: 666px;
     top: 0px;
     left: 0px;
-    opacity: 1;
+    background-repeat: no-repeat;
 }
 
 #bottom {
     background-image: url('bottom.png');
+    animation: bottom 1.5s ease 0s 1 normal forwards;
+    z-index: 0;
 }
 
+@keyframes bottom {
+    0% {
+        background-position-x: -1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+
 #hotel {
-    
+    background-image: url('hotel.png');
+    animation: hotel 1.5s ease 0s 1 normal forwards;
+    z-index: 2;
+    transform: scale(1.01);
+    transform-origin: 50% 20%;
+}
+
+@keyframes hotel {
+    0% {
+        background-position-y: -700px;
+    }
+    100% {
+        background-position-y: 0px;
+    }
 }
 
 #top {
-    
+    background-image: url('top.png');
+    animation: top 1.5s ease 0s 1 normal forwards;
+    z-index: 1;
 }
 
-@keyframes main {
+@keyframes top {
     0% {
-        opacity: 0;
-    }
-    99% {
-        opacity: 0;
+        background-position-x: 1000px;
     }
     100% {
-        opacity: 1;
+        background-position-x: 0px;
     }
 }
