@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	window.addEventListener("pageshow", () => $("#main").show(), false);
+	
 	$("#bellboy").click(function() {
 		$("#speechbubble").fadeToggle();
 	});
